@@ -1,0 +1,18 @@
+{
+  "name": "ice-cream-ecommerce",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i src/input.css -o public/css/styles.css",
+    "watch": "npx tailwindcss -i src/input.css -o public/css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}

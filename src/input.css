@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Regular weight */
+@font-face {
+  font-family: "Berkshire Swash", serif;
+  src: url("../assets/fonts/Berkshire_Swash/BerkshireSwash-Regular.woff2")
+      format("woff2"),
+    url("../assets/fonts/Berkshire_Swash/BerkshireSwash-Regular.woff")
+      format("woff"),
+    url("../assets/fonts/Berkshire_Swash/BerkshireSwash-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular weight for Archivo */
+@font-face {
+  font-family: "Archivo", serif;
+  src: url("../assets/fonts/Archivo/Archivo-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Archivo/Archivo-Regular.woff") format("woff"),
+    url("../assets/fonts/Archivo/Archivo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* SemiBold weight for Archivo */
+@font-face {
+  font-family: "Archivo", serif;
+  src: url("../assets/fonts/Archivo/Archivo-SemiBold.woff2") format("woff2"),
+    url("../assets/fonts/Archivo/Archivo-SemiBold.woff") format("woff"),
+    url("../assets/fonts/Archivo/Archivo-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Bold weight for Archivo */
+@font-face {
+  font-family: "Archivo", serif;
+  src: url("../assets/fonts/Archivo/Archivo-Bold.woff2") format("woff2"),
+    url("../assets/fonts/Archivo/Archivo-Bold.woff") format("woff"),
+    url("../assets/fonts/Archivo/Archivo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  @apply font-archivo text-deep-red;
+}
+
+select,
+input,
+textarea {
+  @apply outline-none;
+}
+a,
+span {
+  @apply inline-block;
+}
+h1 {
+  @apply font-berkshire sm:text-[32px] text-dark-purple !important;
+}
+
+h2 {
+  @apply font-berkshire lg:text-[50px] md:text-[35px] sm:text-[35px] smr:text-[35px] text-dark-charcoal;
+}
+
+h4 {
+  @apply font-berkshire lg:text-[26px] md:text-[19px] sm:text-[19px] text-deep-red;
+}
+
+p {
+  @apply lg:text-[20px] md:text-[15px] sm:text-[14px] text-deep-red;
+}
+
+.btn {
+  @apply rounded-[30px] py-[10px] px-[25px];
+}
+
+@layer components {
+  @media screen and (max-width: 280px) {
+    .xsflexwrap {
+      flex-wrap: wrap;
+      display: flex;
+    }
+    .head-right {
+      @apply mx-auto;
+    }
+  }
+}
+
+.custom-left {
+  left: calc(100% - 50px);
+}
+.custom-width {
+  width: calc(100% - 30px);
+}
+
+.open-search.active {
+  background-color: #fff !important;
+  color: #000;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  .search-box.active {
+    display: block;
+  }
+}
+
+.shopping::before {
+  content: attr(data-count) !important;
+}
+
+.cart-box.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav.active {
+  right: 0 ;
+  opacity: 1;
+}
+
+.tabs.active span:first-child {
+  -webkit-transform: translateY(5px) rotate(45deg);
+  -moz-transform: translateY(5px) rotate(45deg);
+  -o-transform: translateY(5px) rotate(45deg);
+  -ms-transform: translateY(5px) rotate(45deg);
+  transform: translateY(5px) rotate(45deg);
+}
+
+.tabs.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.tabs.active span:last-child {
+  -webkit-transform: translateY(-5px) rotate(-45deg);
+  -moz-transform: translateY(-5px) rotate(-45deg);
+  -o-transform: translateY(-5px) rotate(-45deg);
+  -ms-transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-5px) rotate(-45deg);
+  margin-bottom: 0;
+}
+
+.our-classic:hover a.classic-link {
+  color: #683292;
+}

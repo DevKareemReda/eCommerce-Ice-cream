@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream eCommerce</title>
+    <!-- Libs & Css files -->
+    <link rel="shortcut icon" href="../assets/images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/assets/all.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <!-- _____ NAV && LANDING _____ -->
+    <section class="relative overflow-hidden z-10 bg-[url(../../assets/images/landing-hero.png)] bg-center bg-cover bg-no-repeat before:absolute before:bottom-[-7px] before:overflow-hidden before:z-[2] before:bg-[url(../../assets/images/landing-wave.png)] before:h-[45px] before:w-full">
+      <div class="container relative px-[15px] mx-auto">
+        <div class="py-2 flex xsflexwrap justify-between items-center  z-[2] relative">
+          <a href="#" class="text-[20px]">
+            <h1 class="flex items-center">
+              <img src="../assets/images/logo.png" alt="logo" class="smr:w-[35px]" />
+              <span class="text-rose-pink">Icy</span>Tales
+            </h1>
+          </a>
+          <div class="tabs lg:hidden items-center flex-col justify-center cursor-pointer w-fit z-10 flex relative">
+            <span class="w-[22px] h-[2px] opacity-100 mb-[4px] rounded-[2px] bg-deep-red transition-all duration-[250ms] ease-linear"></span>
+            <span class="w-[22px] h-[2px] opacity-100 mb-[4px] rounded-[2px] bg-deep-red transition-all duration-[250ms] ease-linear"></span>
+            <span class="w-[22px] h-[2px] opacity-100 rounded-[2px] bg-deep-red transition-all duration-[250ms] ease-linear"></span>
+          </div>
+          <ul class="lg:flex hidden gap-x-6">
+            <li><a href="#" class="hover:text-rose-pink text-rose-pink transition-all duration-500 text-[15px]">Home</a></li>
+            <li><a href="#" class="hover:text-rose-pink transition-all duration-500 text-[15px]">About</a></li>
+            <li><a href="#" class="hover:text-rose-pink transition-all duration-500 text-[15px]">Shop</a></li>
+            <li><a href="#" class="hover:text-rose-pink transition-all duration-500 text-[15px]">Blogs</a></li>
+            <li><a href="#" class="hover:text-rose-pink transition-all duration-500 text-[15px]">Faq's</a></li>
+            <li><a href="#" class="hover:text-rose-pink transition-all duration-500 text-[15px]">Contact</a></li>
+          </ul>
+          <div class="flex items-center lg:gap-x-10 gap-x-3 justify-end head-right">
+            <i class="fa-solid fa-magnifying-glass w-[25px] h-[25px] bg-deep-red text-white text-[10px] rounded-[2px] font-bold cursor-pointer leading-[25px] text-center inline-block hover:bg-[rgba(0,0,0,.7)] lg:hidden open-search"></i>
+            <form action="" method="get">
+              <div class="hidden lg:block relative z-30">
+                <input type="text" name="search" placeholder="search ..." class="border-b-gray-200 border-b-[1px] bg-transparent h-9 pl-[0] pr-[28px] text-sm italic focus:not-italic">
+                <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 text-xs"><i class="fa-solid fa-magnifying-glass text-[#AAA]"></i></button>
+              </div>
+              <div class="hidden absolute top-[70%] inset-x-0 p-[25px] bg-[#fff] border-b border-white shadow-[0_3px_7px_rgba(0,0,0,0.2)] custom-width mx-auto z-10 search-box">
+                <input type="text" placeholder="search ..." class="bg-transparent border-b border-gray-300 pl-[14px] pr-[40px] w-full h-[38px] text-sm">
+                <button type="submit" class="absolute left-[15px] top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[#ddd] text-[10px] custom-left">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+            <div class="relative">
+              <span data-count="0" class="shopping cursor-pointer text-center before:absolute before:top-[-4px] before:left-[-2px] before:leading-[15px] before:text-[9px] before:w-[15px] before:h-[15px] before:rounded-full before:text-white before:bg-rose-pink">
+                <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="24" height="27" viewBox="0 0 28 32">
+                  <path class="svg-cart-icon" fill="#0F0200" d="M26,8.91A1,1,0,0,0,25,8H20V6A6,6,0,1,0,8,6V8H3A1,1,0,0,0,2,8.91l-2,22A1,1,0,0,0,1,32H27a1,1,0,0,0,1-1.089ZM10,6a4,4,0,0,1,8,0V8H10V6ZM2.1,30L3.913,10H8v2.277a2,2,0,1,0,2,0V10h8v2.277a2,2,0,1,0,2,0V10h4.087L25.9,30H2.1Z">
+                  </path>
+                </svg>
+              </span>
+              <div class="opacity-0 invisible before:absolute before:top-[-8px] before:right-[7px] before:border-[4px] before:border-solid before:border-transparent before:border-b-dark-purple w-[320px] smr:w-[calc(320px-30px)] bg-white border border-[#f9f1f1] mt-1 z-10 absolute right-0 top-full p-[22px_15px] transition-all duration-200 cart-box">
+                <ul>
+                  <li class="flex items-center text-[11px] mb-[14px] relative">
+                    <a href="#" class="mr-[15px]">
+                      <img src="https://demo.kallyas.net/minimal-store/wp-content/uploads/sites/91/2018/01/product08-1.jpg" alt="product08-1" class="w-[62px]">
+                    </a>
+                    <div class="flex flex-col">
+                      <a href="#" class="text-black capitalize m-[2px_0_15px] font-normal hover:text-rose-pink">blue bag</a>
+                      <span class="text-dark-charcoal">
+                        1 x
+                        <span class="mr-[5px]">£148.99</span>
+                      </span>
+                    </div>
+                    <span class="cursor-pointer text-red-500 text-[16px] block absolute top-0 right-0 hover:opacity-[.85]">&times;</span>
+                  </li>
+                </ul>
+                <ul class="border-t border-b border-[#ececec] py-[20px] text-[11px] mb-[1rem]">
+                  <strong class="text-deep-red">Subtotal:</strong>
+                  <span class="font-bold float-right text-[14px] text-deep-red">£347.97</span>
+                </ul>
+                <div class="text-center flex justify-between">
+                  <a href="carts.html" class="w-[calc(50%-12px)] p-[8px] text-[13px] border-2 border-rose-pink bg-rose-pink text-white transition-all duration-200 ease-in-out rounded-sm hover:opacity-[.95]">View cart</a>
+                  <a href="checkout.html" class="w-[calc(50%-12px)] p-[8px] text-[13px] border-2 border-dark-purple text-deep-red transition-all duration-200 ease-in-out rounded-sm">Checkout</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="container px-[15px] mx-auto">
+        <div class="md:flex md:justify-between items-center min-h-[calc(100vh-87px)] xsr:py-[40px]">
+          <div class="sm:w-full md:w-1/2">
+            <h4 class="relative pl-20 before:absolute before:top-1/2 before:-translate-y-1/2 before:h-[3px] before:w-[64px] before:left-0 before:bg-dark-purple">Welcome to The</h4>
+            <h2 class="smr:my-3">Discover <span class="text-rose-pink">Sweet</span> Delights!</h2>
+            <p>Relish the tivmeless taste of handcrafted ice cream, made with passion and the finest ingredients.</p>
+            <a href="#" class="flex w-[fit-content] gap-2 items-center btn text-white font-semibold mt-[16px] bg-dark-purple shadow-5xl-purple smr:text-[13px]">Browse Our Classic Flavors <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.50312 1.07031L5.01875 0.554688C5.25312 0.34375 5.60469 0.34375 5.81562 0.554688L10.3859 5.10156C10.5969 5.33594 10.5969 5.6875 10.3859 5.89844L5.81562 10.4688C5.60469 10.6797 5.25312 10.6797 5.01875 10.4688L4.50312 9.95312C4.29219 9.71875 4.29219 9.36719 4.50312 9.13281L7.33906 6.4375H0.6125C0.284375 6.4375 0.0499997 6.20312 0.0499997 5.875V5.125C0.0499997 4.82031 0.284375 4.5625 0.6125 4.5625H7.33906L4.50312 1.89062C4.29219 1.65625 4.26875 1.30469 4.50312 1.07031Z" fill="white"/>
+              <a href="https://www.figma.com/design/5WvY9fet6wwPyvtxlkeo0k?node-id=1-1170">
+              <rect fill="black" fill-opacity="0" x="0.159375" y="-0.4" width="10.5" height="13.8"/>
+              </a>
+              </svg>
+              </a>
+          </div>
+          <div class="sm:w-full md:w-1/2 xsr:mt-12 relative">
+            <div class="ml-auto">
+              <img src="../assets/images/ice-circle.png" class="lg:w-[350px] sm:w-[250px] smr:w-[250px] xsr:mx-auto md:ml-auto" alt="ice-circle">
+              <img src="../assets/images/ice-cream.png" class="lg:w-[330px] sm:w-[230px] smr:w-[230px] absolute top-5 xsr:left-[50%] xsr:-translate-x-[50%] right-0" alt="ice-cream">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./NAV && LANDING -->
+
+    <!-- _____ MOBILE NAV _____ -->
+    <div class="max-w-[300px] p-[58px_20px] z-[20] fixed bg-white w-[300px]  top-0 right-[-100%] opacity-0 h-full overflow-hidden shadow-[rgba(0,_0,_0,_0.1)_-10px_0_20px_-10px] transition-all duration-[250ms] ease-linear mobile-nav">
+      <span class="absolute right-[20px] top-0 cursor-pointer text-[35px] text-deep-red close-nav">&times;</span>
+      <ul>
+        <li><a href="#" class="py-[9px] hover:text-rose-pink text-rose-pink transition-all duration-500 text-[15px]">Home</a></li>
+        <li><a href="#" class="py-[9px] hover:text-rose-pink transition-all duration-500 text-[15px]">About</a></li>
+        <li><a href="#" class="py-[9px] hover:text-rose-pink transition-all duration-500 text-[15px]">Shop</a></li>
+        <li><a href="#" class="py-[9px] hover:text-rose-pink transition-all duration-500 text-[15px]">Blogs</a></li>
+        <li><a href="#" class="py-[9px] hover:text-rose-pink transition-all duration-500 text-[15px]">Faq's</a></li>
+        <li><a href="#" class="py-[9px] hover:text-rose-pink transition-all duration-500 text-[15px]">Contact</a></li>
+      </ul>
+    </div>
+    <!-- ./MOBILE NAV -->
+
+    <!-- _____ EXPLORE _____ -->
+    <section class="py-[60px] relative">
+      <div class="container px-[15px] flex mx-auto">
+        <div class="flex xsr:flex-wrap justify-center items-center gap-[40px]">
+          <div class="lg:w-1/3 xs:w-full relative before:z-[-1] before:absolute before:top-[15%] before:w-full before:h-[85%] before:right-0 before:bg-[url(../../assets/images/ice-circle.png)] before:bg-cover before:bg-center">
+              <img src="../assets/images/relive-image.png" alt="relive-image">
+              <img src="../assets/images/relive-circle.png" alt="relive-circle" class="absolute w-[45px] bottom-[50px] left-[-40%] xsr:left-0 xsr:top-0 xsr:w-[30px] smr:w-[100px]">
+          </div>
+          <div class="lg:w-1/3 xs:w-full relative">
+            <h4 class="text-[19px] smr:text-[27px] lg:text-[32px]">
+              Relive the Sweet Memories of Classic
+              <span class="text-rose-pink">Ice Creams</span>
+            </h4>
+            <p class="text-[#646464] text-[14px] p-[12px_0_16px_0]">From rich chocolate fudge to creamy vanilla sundaes,
+              discover our menu of classic ice cream creations.</p>
+              <a href="#" class="flex w-[fit-content] gap-2 items-center btn text-white font-semibold bg-rose-pink shadow-5xl-pink smr:text-[13px]">Explore Our Menu <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.50312 1.07031L5.01875 0.554688C5.25312 0.34375 5.60469 0.34375 5.81562 0.554688L10.3859 5.10156C10.5969 5.33594 10.5969 5.6875 10.3859 5.89844L5.81562 10.4688C5.60469 10.6797 5.25312 10.6797 5.01875 10.4688L4.50312 9.95312C4.29219 9.71875 4.29219 9.36719 4.50312 9.13281L7.33906 6.4375H0.6125C0.284375 6.4375 0.0499997 6.20312 0.0499997 5.875V5.125C0.0499997 4.82031 0.284375 4.5625 0.6125 4.5625H7.33906L4.50312 1.89062C4.29219 1.65625 4.26875 1.30469 4.50312 1.07031Z" fill="white"/>
+                <a href="https://www.figma.com/design/5WvY9fet6wwPyvtxlkeo0k?node-id=1-1170">
+                <rect fill="black" fill-opacity="0" x="0.159375" y="-0.4" width="10.5" height="13.8"/>
+                </a>
+                </svg>
+              </a>
+              <img src="../assets/images/relive-triangle.png" alt="relive-triangle" class="absolute w-[35px] right-[-30%] md:top-[0] lg:top-[0] xl:top-[50px] md:right-[25px] xsr:right-0 xsr:top-[-10px]">
+          </div>
+        </div>
+      </div>
+      <img src="../assets/images/relive-rightbottom.png" alt="relive-rightbottom" class="absolute bottom-0 right-0 sm:w-[130px] md:w-[150px] smr:w-[100px]">
+    </section>
+    <!-- ./EXPLORE -->
+
+    <!-- _____ OUR CLASSIC _____ -->
+    <section class="mt-[10px] py-[80px] bg-[linear-gradient(301.26deg,_#EFD7EF_8%,_#F5F9FC_43%,_#F8EAE1_64%,_#EAF8F9_87%)]">
+      <div class="container px-[15px] mx-auto">
+        <div class="text-center mx-auto mb-[50px]">
+          <h4 class="text-[19px] smr:text-[26px] sm:text-[30px] lg:text-[40px]">Our <span class="text-rose-pink">Classic</span> Favorites</h4>
+          <p class="xsr:text-[15px] mt-[18px]">Check out our favorite vegan ice cream flavors.</p>
+        </div>
+        <div class="grid smr:grid-cols-1 xsr:grid-cols-2sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="bg-white  p-[11px] rounded-[20px]">
+            <img src="../assets/images/product01.png" alt="product01" class="w-full">
+            <div class="pt-[20px] our-classic">
+              <div class="flex justify-between items-start">
+                <a  href="#" class="font-bold text-[20px] xsr:text-[17px] classic-link duration-150 ease-linear">Chocolate Brownie  <br> Sundae</a>
+                <p class="text-[14px] flex items-center mt-1">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.65039 0.921875C6.93164 0.359375 7.72852 0.382812 7.98633 0.921875L9.5332 4.03906L12.9551 4.53125C13.5645 4.625 13.7988 5.375 13.3535 5.82031L10.8926 8.23438L11.4785 11.6328C11.5723 12.2422 10.916 12.7109 10.377 12.4297L7.33008 10.8125L4.25977 12.4297C3.7207 12.7109 3.06445 12.2422 3.1582 11.6328L3.74414 8.23438L1.2832 5.82031C0.837891 5.375 1.07227 4.625 1.68164 4.53125L5.12695 4.03906L6.65039 0.921875Z" fill="#FBAB2A"/>
+                  </svg>
+                  <span class="font-semibold">4.9/5</span>
+                </p>
+              </div>
+              <p class="text-[14px] py-[10px] text-[#646464]">
+                Rich chocolate ice cream with chunks of brownie.</p>
+
+                <div class="flex items-center justify-between">
+                  <span class="text-rose-pink font-bold text-[22px]">$5.49</span>
+                  <span class="w-[46px] h-[46px] rounded-[50%] text-center cursor-pointer flex justify-center items-center bg-dark-purple"><svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="24" height="22" transform="translate(0 0.800049)" fill="url(#pattern0_1_112)"/>
+                    <defs>
+                    <pattern id="pattern0_1_112" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_112" transform="scale(0.0416667 0.0454545)"/>
+                    </pattern>
+                    <image id="image0_1_112" width="24" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM2RkUyRTIxMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM2RkUyRTIyMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzZGRTJFMUYwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzZGRTJFMjAwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7pJv37AAABoUlEQVR42sSVzytEURTH546pmSYN+QcsJIliQ8n4OQtJyU7JQrJQFv4CG7KxULNCspWslCILCzMUZVIWommSDQtZqGkSxvO5dSbjekPvvSm3Pp07c94733fOvfdcn2VZN3ALs1DpK/cg6KH1NR6gpZzxlYj0YOYgBrtKqWH+q2Y+DSEXcfNwTpz94kxqJItnqIApy/tYVEa5rjCN0AppGIewiwz0O/PwZq7HmijPeFzXKshD1m/4TsRGPa5tB+jYp6bAcZkEusUm7dK7lzLVeihRUmLE7Jzb4hxzGTwIL/AOYb/NM4UydblMoA2CkOIc5OwECgvd6VIgWrL+kqI+ZFn4kNPstER7UuIR/Tvwo3copfdvgukgxJlfOIiv20qftIrkb1/RC68eWkT8W7MrIdKAGYKIgwx0a0jBAZWwfP8+9AUES3JnLEDI5plRWdhNaHYqsCU1zYhdNfwDRRdVDh4h4kRA3w07Mj+CO8O/LAL6Lpmwaw+BPzSuoZ+XVrDtkDD8abHrUC/bM+Mkgya4lC87gzrDH4AN2dJPMGnG+BRgAOCo3Fivo43jAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                    </span>
+                </div>
+
+            </div>
+          </div>
+          <div class="bg-white  p-[11px] rounded-[20px]">
+            <img src="../assets/images/product02.png" alt="product01" class="w-full">
+            <img src="" alt="">
+            <div class="pt-[20px]">
+              <div class="flex justify-between items-start">
+                <a  href="#" class="font-bold text-[20px] xsr:text-[17px]">Strawberry Shortcake</a>
+                <p class="text-[14px] flex items-center mt-1">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.65039 0.921875C6.93164 0.359375 7.72852 0.382812 7.98633 0.921875L9.5332 4.03906L12.9551 4.53125C13.5645 4.625 13.7988 5.375 13.3535 5.82031L10.8926 8.23438L11.4785 11.6328C11.5723 12.2422 10.916 12.7109 10.377 12.4297L7.33008 10.8125L4.25977 12.4297C3.7207 12.7109 3.06445 12.2422 3.1582 11.6328L3.74414 8.23438L1.2832 5.82031C0.837891 5.375 1.07227 4.625 1.68164 4.53125L5.12695 4.03906L6.65039 0.921875Z" fill="#FBAB2A"/>
+                  </svg>
+                  <span class="font-semibold">4.9/5</span>
+                </p>
+              </div>
+              <p class="text-[14px] py-[10px] text-[#646464]">
+                Strawberry ice cream layered with shortcake</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-rose-pink font-bold text-[22px]">$5.29</span>
+                  <span class="w-[46px] h-[46px] rounded-[50%] text-center cursor-pointer flex justify-center items-center bg-dark-purple"><svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="24" height="22" transform="translate(0 0.800049)" fill="url(#pattern0_1_112)"/>
+                    <defs>
+                    <pattern id="pattern0_1_112" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_112" transform="scale(0.0416667 0.0454545)"/>
+                    </pattern>
+                    <image id="image0_1_112" width="24" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM2RkUyRTIxMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM2RkUyRTIyMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzZGRTJFMUYwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzZGRTJFMjAwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7pJv37AAABoUlEQVR42sSVzytEURTH546pmSYN+QcsJIliQ8n4OQtJyU7JQrJQFv4CG7KxULNCspWslCILCzMUZVIWommSDQtZqGkSxvO5dSbjekPvvSm3Pp07c94733fOvfdcn2VZN3ALs1DpK/cg6KH1NR6gpZzxlYj0YOYgBrtKqWH+q2Y+DSEXcfNwTpz94kxqJItnqIApy/tYVEa5rjCN0AppGIewiwz0O/PwZq7HmijPeFzXKshD1m/4TsRGPa5tB+jYp6bAcZkEusUm7dK7lzLVeihRUmLE7Jzb4hxzGTwIL/AOYb/NM4UydblMoA2CkOIc5OwECgvd6VIgWrL+kqI+ZFn4kNPstER7UuIR/Tvwo3copfdvgukgxJlfOIiv20qftIrkb1/RC68eWkT8W7MrIdKAGYKIgwx0a0jBAZWwfP8+9AUES3JnLEDI5plRWdhNaHYqsCU1zYhdNfwDRRdVDh4h4kRA3w07Mj+CO8O/LAL6Lpmwaw+BPzSuoZ+XVrDtkDD8abHrUC/bM+Mkgya4lC87gzrDH4AN2dJPMGnG+BRgAOCo3Fivo43jAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                    </span>
+                </div>
+
+            </div>
+          </div>
+          <div class="bg-white  p-[11px] rounded-[20px]">
+            <img src="../assets/images/product03.png" alt="product03" class="w-full">
+            <div class="pt-[20px]">
+              <div class="flex justify-between items-start">
+                <a  href="#" class="font-bold text-[20px] xsr:text-[17px]">Mint Chocolate <br> Chip Cone</a>
+                <p class="text-[14px] flex items-center mt-1">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.65039 0.921875C6.93164 0.359375 7.72852 0.382812 7.98633 0.921875L9.5332 4.03906L12.9551 4.53125C13.5645 4.625 13.7988 5.375 13.3535 5.82031L10.8926 8.23438L11.4785 11.6328C11.5723 12.2422 10.916 12.7109 10.377 12.4297L7.33008 10.8125L4.25977 12.4297C3.7207 12.7109 3.06445 12.2422 3.1582 11.6328L3.74414 8.23438L1.2832 5.82031C0.837891 5.375 1.07227 4.625 1.68164 4.53125L5.12695 4.03906L6.65039 0.921875Z" fill="#FBAB2A"/>
+                  </svg>
+                  <span class="font-semibold">4.9/5</span>
+                </p>
+              </div>
+              <p class="text-[14px] py-[10px] text-[#646464]">
+                Refreshing mint ice cream with chocolate chips.</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-rose-pink font-bold text-[22px]">$3.99</span>
+                  <span class="w-[46px] h-[46px] rounded-[50%] text-center cursor-pointer flex justify-center items-center bg-dark-purple"><svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="24" height="22" transform="translate(0 0.800049)" fill="url(#pattern0_1_112)"/>
+                    <defs>
+                    <pattern id="pattern0_1_112" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_112" transform="scale(0.0416667 0.0454545)"/>
+                    </pattern>
+                    <image id="image0_1_112" width="24" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM2RkUyRTIxMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM2RkUyRTIyMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzZGRTJFMUYwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzZGRTJFMjAwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7pJv37AAABoUlEQVR42sSVzytEURTH546pmSYN+QcsJIliQ8n4OQtJyU7JQrJQFv4CG7KxULNCspWslCILCzMUZVIWommSDQtZqGkSxvO5dSbjekPvvSm3Pp07c94733fOvfdcn2VZN3ALs1DpK/cg6KH1NR6gpZzxlYj0YOYgBrtKqWH+q2Y+DSEXcfNwTpz94kxqJItnqIApy/tYVEa5rjCN0AppGIewiwz0O/PwZq7HmijPeFzXKshD1m/4TsRGPa5tB+jYp6bAcZkEusUm7dK7lzLVeihRUmLE7Jzb4hxzGTwIL/AOYb/NM4UydblMoA2CkOIc5OwECgvd6VIgWrL+kqI+ZFn4kNPstER7UuIR/Tvwo3copfdvgukgxJlfOIiv20qftIrkb1/RC68eWkT8W7MrIdKAGYKIgwx0a0jBAZWwfP8+9AUES3JnLEDI5plRWdhNaHYqsCU1zYhdNfwDRRdVDh4h4kRA3w07Mj+CO8O/LAL6Lpmwaw+BPzSuoZ+XVrDtkDD8abHrUC/bM+Mkgya4lC87gzrDH4AN2dJPMGnG+BRgAOCo3Fivo43jAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                    </span>
+                </div>
+
+            </div>
+          </div>
+          <div class="bg-white  p-[11px] rounded-[20px]">
+            <img src="../assets/images/product04.png" alt="product03" class="w-full">
+            <div class="p-[20px_8px_0_8px]">
+              <div class="flex justify-between items-start">
+                <a href="#" class="font-bold text-[20px] xsr:text-[17px]">Classic Vanilla <br> Ice Cream</a>
+                <p class="text-[14px] flex items-center mt-1">
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.65039 0.921875C6.93164 0.359375 7.72852 0.382812 7.98633 0.921875L9.5332 4.03906L12.9551 4.53125C13.5645 4.625 13.7988 5.375 13.3535 5.82031L10.8926 8.23438L11.4785 11.6328C11.5723 12.2422 10.916 12.7109 10.377 12.4297L7.33008 10.8125L4.25977 12.4297C3.7207 12.7109 3.06445 12.2422 3.1582 11.6328L3.74414 8.23438L1.2832 5.82031C0.837891 5.375 1.07227 4.625 1.68164 4.53125L5.12695 4.03906L6.65039 0.921875Z" fill="#FBAB2A"/>
+                  </svg>
+                  <span class="font-semibold">4.9/5</span>
+                </p>
+              </div>
+              <p class="text-[14px] py-[10px] text-[#646464]">
+                Creamy vanilla <br> ice cream topped with cherry.</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-rose-pink font-bold text-[22px]">$4.99</span>
+                  <span class="w-[46px] h-[46px] rounded-[50%] text-center cursor-pointer flex justify-center items-center bg-dark-purple"><svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="24" height="22" transform="translate(0 0.800049)" fill="url(#pattern0_1_112)"/>
+                    <defs>
+                    <pattern id="pattern0_1_112" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_1_112" transform="scale(0.0416667 0.0454545)"/>
+                    </pattern>
+                    <image id="image0_1_112" width="24" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAWCAYAAADafVyIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM2RkUyRTIxMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM2RkUyRTIyMDJFODExRUVBNzM3QTRFOEFGOUVCNERDIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzZGRTJFMUYwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzZGRTJFMjAwMkU4MTFFRUE3MzdBNEU4QUY5RUI0REMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7pJv37AAABoUlEQVR42sSVzytEURTH546pmSYN+QcsJIliQ8n4OQtJyU7JQrJQFv4CG7KxULNCspWslCILCzMUZVIWommSDQtZqGkSxvO5dSbjekPvvSm3Pp07c94733fOvfdcn2VZN3ALs1DpK/cg6KH1NR6gpZzxlYj0YOYgBrtKqWH+q2Y+DSEXcfNwTpz94kxqJItnqIApy/tYVEa5rjCN0AppGIewiwz0O/PwZq7HmijPeFzXKshD1m/4TsRGPa5tB+jYp6bAcZkEusUm7dK7lzLVeihRUmLE7Jzb4hxzGTwIL/AOYb/NM4UydblMoA2CkOIc5OwECgvd6VIgWrL+kqI+ZFn4kNPstER7UuIR/Tvwo3copfdvgukgxJlfOIiv20qftIrkb1/RC68eWkT8W7MrIdKAGYKIgwx0a0jBAZWwfP8+9AUES3JnLEDI5plRWdhNaHYqsCU1zYhdNfwDRRdVDh4h4kRA3w07Mj+CO8O/LAL6Lpmwaw+BPzSuoZ+XVrDtkDD8abHrUC/bM+Mkgya4lC87gzrDH4AN2dJPMGnG+BRgAOCo3Fivo43jAAAAAElFTkSuQmCC"/>
+                    </defs>
+                    </svg>
+                    </span>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./OUR CLASSIC -->
+
+    <!-- _____ CATEGORIES _____ -->
+    <section class="py-[80px]">
+      <div class="container px-[15px] mx-auto">
+        <div class="text-center mx-auto mb-[50px]">
+          <h4 class="text-[19px] smr:text-[26px] sm:text-[30px] lg:text-[40px]">Explore Our <span class="text-rose-pink">Categories</span></h4>
+          <p class="xsr:text-[15px] mt-[18px]">Browse through our different categories to find your favorite ice cream treats.</p>
+        </div>
+        <div class="flex justify-between">
+          <div class="grid smr:grid-cols-1 xsr:grid-cols-2sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center mx-auto">
+            <div class="relative">
+              <img src="../assets/images/categories01.png" alt="categories01" class="w-full">
+              <div class="bg-white flex justify-between items-center rounded-[16px] p-[11px_22px] absolute bottom-[6px] left-0 right-0 w-[calc(100%-10px)] mx-auto">
+                <a href="#" class="text-[16px] font-bold">Sundaes</a>
+                <span class="bg-rose-pink flex justify-center items-center rounded-[50%] w-[38px] h-[38px] text-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.50312 1.07031L5.01875 0.554688C5.25312 0.34375 5.60469 0.34375 5.81562 0.554688L10.3859 5.10156C10.5969 5.33594 10.5969 5.6875 10.3859 5.89844L5.81562 10.4688C5.60469 10.6797 5.25312 10.6797 5.01875 10.4688L4.50312 9.95312C4.29219 9.71875 4.29219 9.36719 4.50312 9.13281L7.33906 6.4375H0.6125C0.284375 6.4375 0.0499997 6.20312 0.0499997 5.875V5.125C0.0499997 4.82031 0.284375 4.5625 0.6125 4.5625H7.33906L4.50312 1.89062C4.29219 1.65625 4.26875 1.30469 4.50312 1.07031Z" fill="white"></path>
+                  <a href="https://www.figma.com/design/5WvY9fet6wwPyvtxlkeo0k?node-id=1-1170">
+                  <rect fill="black" fill-opacity="0" x="0.159375" y="-0.4" width="10.5" height="13.8"></rect>
+                  </a>
+                  </svg></span>
+              </div>
+            </div>
+            <div class="relative">
+              <img src="../assets/images/categories02.png" alt="categories02" class="w-full">
+              <div class="bg-white flex justify-between items-center rounded-[16px] p-[11px_22px] absolute bottom-[6px] left-0 right-0 w-[calc(100%-10px)] mx-auto">
+                <a href="#" class="text-[16px] font-bold">Ice Cream Cones</a>
+                <span class="bg-rose-pink flex justify-center items-center rounded-[50%] w-[38px] h-[38px] text-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.50312 1.07031L5.01875 0.554688C5.25312 0.34375 5.60469 0.34375 5.81562 0.554688L10.3859 5.10156C10.5969 5.33594 10.5969 5.6875 10.3859 5.89844L5.81562 10.4688C5.60469 10.6797 5.25312 10.6797 5.01875 10.4688L4.50312 9.95312C4.29219 9.71875 4.29219 9.36719 4.50312 9.13281L7.33906 6.4375H0.6125C0.284375 6.4375 0.0499997 6.20312 0.0499997 5.875V5.125C0.0499997 4.82031 0.284375 4.5625 0.6125 4.5625H7.33906L4.50312 1.89062C4.29219 1.65625 4.26875 1.30469 4.50312 1.07031Z" fill="white"></path>
+                  <a href="https://www.figma.com/design/5WvY9fet6wwPyvtxlkeo0k?node-id=1-1170">
+                  <rect fill="black" fill-opacity="0" x="0.159375" y="-0.4" width="10.5" height="13.8"></rect>
+                  </a>
+                  </svg></span>
+              </div>
+            </div>
+            <div class="relative">
+              <img src="../assets/images/categories03.png" alt="categories03" class="w-full">
+              <div class="bg-white flex justify-between items-center rounded-[16px] p-[11px_22px] absolute bottom-[6px] left-0 right-0 w-[calc(100%-10px)] mx-auto">
+                <a href="#" class="text-[16px] font-bold">Milkshakes</a>
+                <span class="bg-rose-pink flex justify-center items-center rounded-[50%] w-[38px] h-[38px] text-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.50312 1.07031L5.01875 0.554688C5.25312 0.34375 5.60469 0.34375 5.81562 0.554688L10.3859 5.10156C10.5969 5.33594 10.5969 5.6875 10.3859 5.89844L5.81562 10.4688C5.60469 10.6797 5.25312 10.6797 5.01875 10.4688L4.50312 9.95312C4.29219 9.71875 4.29219 9.36719 4.50312 9.13281L7.33906 6.4375H0.6125C0.284375 6.4375 0.0499997 6.20312 0.0499997 5.875V5.125C0.0499997 4.82031 0.284375 4.5625 0.6125 4.5625H7.33906L4.50312 1.89062C4.29219 1.65625 4.26875 1.30469 4.50312 1.07031Z" fill="white"></path>
+                  <a href="https://www.figma.com/design/5WvY9fet6wwPyvtxlkeo0k?node-id=1-1170">
+                  <rect fill="black" fill-opacity="0" x="0.159375" y="-0.4" width="10.5" height="13.8"></rect>
+                  </a>
+                  </svg></span>
+              </div>
+            </div>
+            <div class="relative">
+              <img src="../assets/images/categories04.png" alt="categories04" class="w-full">
+              <div class="bg-white flex justify-between items-center rounded-[16px] p-[11px_22px] absolute bottom-[6px] left-0 right-0 w-[calc(100%-10px)] mx-auto">
+                <a href="#" class="text-[16px] font-bold">Seasonal Flavors</a>
+                <span class="bg-rose-pink flex justify-center items-center rounded-[50%] w-[38px] h-[38px] text-center"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.50312 1.07031L5.01875 0.554688C5.25312 0.34375 5.60469 0.34375 5.81562 0.554688L10.3859 5.10156C10.5969 5.33594 10.5969 5.6875 10.3859 5.89844L5.81562 10.4688C5.60469 10.6797 5.25312 10.6797 5.01875 10.4688L4.50312 9.95312C4.29219 9.71875 4.29219 9.36719 4.50312 9.13281L7.33906 6.4375H0.6125C0.284375 6.4375 0.0499997 6.20312 0.0499997 5.875V5.125C0.0499997 4.82031 0.284375 4.5625 0.6125 4.5625H7.33906L4.50312 1.89062C4.29219 1.65625 4.26875 1.30469 4.50312 1.07031Z" fill="white"></path>
+                  <a href="https://www.figma.com/design/5WvY9fet6wwPyvtxlkeo0k?node-id=1-1170">
+                  <rect fill="black" fill-opacity="0" x="0.159375" y="-0.4" width="10.5" height="13.8"></rect>
+                  </a>
+                  </svg></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./CATEGORIES -->
+
+    <!-- Libs & Js files -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
